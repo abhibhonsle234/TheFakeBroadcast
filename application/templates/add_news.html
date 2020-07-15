@@ -1,0 +1,23 @@
+{% block content %}
+
+	<h2>Submit your news article to The Fake BroadCast</h2>
+
+	{{ form.hidden_tag() }}
+
+	{{ form.Headlines.label }}
+	{{ form.Headlines }}
+
+	{{ form.Description.label }}
+	{{ form.Description }}
+
+	{{ form.AuthorName.label }}
+	{{ form.AuthorName }}
+
+	{{ form.NewsCategory.label }}
+	{{ form.NewsCategory }}
+
+	{{ form.Submit() }}
+	
+	
+
+{% endblock %}

@@ -1,0 +1,13 @@
+    <header>
+        <nav>
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="{{ url_for('index') }}" class="nav-link {% if index %}active{% endif %}">Home</a></li>
+                
+                <li class="nav-item"><a href="{{ url_for('news') }}" class="nav-link {% if news %}active{% endif %}">News</a></li>
+
+                <li class="nav-item"><a href="{{ url_for('contact_us') }}" class="nav-link {% if contact_us %}active{% endif %}">Contact Us</a></li>
+                                
+            </ul>
+        </nav>
+        <hr style="clear:both">
+    </header>
