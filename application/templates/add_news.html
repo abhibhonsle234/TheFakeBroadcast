@@ -1,23 +1,27 @@
+{% extends "layout.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
 {% block content %}
 
-	<h2>Submit your news article to The Fake BroadCast</h2>
+	<div class="row my-5">
+        <div class="col-md-8 mx-auto"style="border: 2px solid black;">
+            <h2>Submit your news article to The Fake BroadCast</h2>
+            <form name="login" action="" method="post" novalidate>
+                <div class="form-group">
+					<legend>{{title}}</legend> 
+                    
+                    	{{ wtf.form_field(form.Headlines, class='form-control', placeholder='Write down the headline') }}
 
-	{{ form.hidden_tag() }}
+                    	{{ wtf.form_field(form.Description, class='form-control', placeholder='Write down the article') }}
 
-	{{ form.Headlines.label }}
-	{{ form.Headlines }}
+                    	{{ wtf.form_field(form.AuthorName, class='form-control', placeholder="Your/Author's name") }}
+					
+						{{ wtf.form_field(form.NewsCategory, class='form-control', placeholder='select the category') }}
 
-	{{ form.Description.label }}
-	{{ form.Description }}
-
-	{{ form.AuthorName.label }}
-	{{ form.AuthorName }}
-
-	{{ form.NewsCategory.label }}
-	{{ form.NewsCategory }}
-
-	{{ form.Submit() }}
-	
-	
+						{{ wtf.form_field(form.Submit, class='btn btn-success') }}
+						
+				</div>
+            </form>
+        </div>
+    </div>	
 
 {% endblock %}
